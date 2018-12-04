@@ -9,8 +9,8 @@ public class Tea extends Beverage {
 	
 		//////Constructors///////////
 	
- 	public Tea (MakeHotBev VmakeHotBev, String Vsize, String VmilkType, int VsugarAmount ) {
-		super(VmakeHotBev);
+ 	public Tea (MakeHotBev VHotBeverage, String Vsize, String VmilkType, int VsugarAmount ) {
+		super(VHotBeverage);
 		this.size = Vsize;
 		this.milkType = VmilkType;
 		this.sugarAmount = VsugarAmount;
@@ -19,12 +19,10 @@ public class Tea extends Beverage {
 
 		
 		//////Methods////////////////
-		
-	@Override
-	public void drinkInfo() {
-		// TODO Auto-generated method stub
-		
-		
+		@Override
+	public void HotBevInfo() {
+		System.out.print("A Hot drink has beeen made: ");
+		HotBeverage.makeBeverage(size, milkType, sugarAmount); //uses interface method
 	}
 	
 }
